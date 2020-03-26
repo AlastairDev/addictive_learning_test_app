@@ -1,0 +1,31 @@
+name: addictive_learning
+description: Addictive Learning
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.3
+  shared_preferences: ^0.4.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - 1.png
+    - 1_999.png
+    - Group 164.png
+    - Group 247.png
+    - logo_white.png
+    - New_app.png
+    - Site-constructor1.png
