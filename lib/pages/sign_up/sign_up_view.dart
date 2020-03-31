@@ -1,4 +1,5 @@
 import 'package:addictive_learning/common/EN_en.dart';
+import 'package:addictive_learning/common/app_settings.dart';
 import 'package:addictive_learning/pages/sign_up/sign_up_bloc.dart';
 import 'package:addictive_learning/widgets/AuthAppBar.dart';
 import 'package:addictive_learning/widgets/AuthButton.dart';
@@ -125,7 +126,7 @@ class SignUpScreenState extends State<SignUpScreen> {
                     text: SIGN_UP_WITH_APPLE,
                     color: 0xFF333333,
                     textColor: 0xFFFFFFFF,
-                    onPressed: () => {},
+                    onPressed: () => {Navigator.of(context).pushNamed(PAGE_SIGN_UP_APPLE)},
                   ),
                 ),
               ]),

@@ -1,4 +1,5 @@
 import 'package:addictive_learning/common/EN_en.dart';
+import 'package:addictive_learning/common/app_settings.dart';
 import 'package:addictive_learning/widgets/AuthAppBar.dart';
 import 'package:addictive_learning/widgets/AuthButton.dart';
 import 'package:flutter/material.dart';
@@ -56,7 +57,7 @@ class SignInAppleScreenState extends State<SignInAppleScreen> {
                       text: SIGN_UP_WITH_APPLE_BUTTON_TEXT,
                       color: 0xFF333333,
                       textColor: 0xFFFFFFFF,
-                      onPressed: () => {}),
+                    onPressed: () => {Navigator.of(context).pushNamed(PAGE_SIGN_UP_APPLE)},),
                 ),
               ]),
         ),

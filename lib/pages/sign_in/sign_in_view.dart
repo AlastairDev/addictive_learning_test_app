@@ -132,9 +132,8 @@ class SignInScreenState extends State<SignInScreen> {
                       onPressed: () => {
                         _bloc.formSubmit((isLoggedIn) {
                           if (isLoggedIn) {
-                            //TODO: change route to main screen
                             Navigator.of(context).pushNamedAndRemoveUntil(
-                                PAGE_AUTH, (Route<dynamic> route) => false);
+                                PAGE_MAIN, (Route<dynamic> route) => false);
                           }
                         })
                       },
@@ -162,7 +161,7 @@ class SignInScreenState extends State<SignInScreen> {
                     text: SIGN_UP_WITH_APPLE,
                     color: 0xFF333333,
                     textColor: 0xFFFFFFFF,
-                    onPressed: () => {},
+                    onPressed: () => {Navigator.of(context).pushNamed(PAGE_SIGN_UP_APPLE)},
                   ),
                 ),
               ]),
