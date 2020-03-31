@@ -1,5 +1,8 @@
 import 'dart:async';
+import 'package:addictive_learning/common/EN_en.dart';
+import 'package:addictive_learning/common/app_settings.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -11,6 +14,9 @@ class SplashScreen extends StatefulWidget {
 class SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
     super.initState();
     loadData();
   }
@@ -20,8 +26,7 @@ class SplashScreenState extends State<SplashScreen> {
   }
 
   onDoneLoading() async {
-//    Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomeScreen()));
-    print("onDoneLoading");
+    Navigator.of(context).pushNamedAndRemoveUntil(PAGE_AUTH, (Route<dynamic> route) => false);
   }
 
   @override
@@ -44,14 +49,14 @@ class SplashScreenState extends State<SplashScreen> {
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.only(top: 56),
-                        child: Text("Addictive",
+                        child: Text(SPLASH_TITLE_1,
                             textAlign: TextAlign.left,
                             style: TextStyle(
                               color: Color(0xFFE00060),
                               fontSize: 55.0,
                             )),
                       ),
-                      Text("Learning",
+                      Text(SPLASH_TITLE_2,
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             color: Color(0xFF6CC5D7),
@@ -59,7 +64,7 @@ class SplashScreenState extends State<SplashScreen> {
                           )),
                       Padding(
                         padding: const EdgeInsets.only(top: 20),
-                        child: Text("Social Learning App"),
+                        child: Text(SPLASH_TEXT),
                       ),
                     ],
                   ),

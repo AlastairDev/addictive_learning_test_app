@@ -1,21 +1,15 @@
-import 'package:addictive_learning/common/EN_en.dart';
 import 'package:addictive_learning/widgets/AuthAppBar.dart';
 import 'package:addictive_learning/widgets/AuthButton.dart';
 import 'package:flutter/material.dart';
+import 'package:addictive_learning/common/EN_en.dart';
 
-class SignInAppleScreen extends StatefulWidget {
+class ResetPasswordSentScreen extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() {
-    return SignInAppleScreenState();
-  }
+  State<StatefulWidget> createState() => ResetPasswordSentScreenState();
 }
 
-class SignInAppleScreenState extends State<SignInAppleScreen> {
+class ResetPasswordSentScreenState extends State<ResetPasswordSentScreen> {
   @override
-  void initState() {
-    super.initState();
-  }
-
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
@@ -25,15 +19,12 @@ class SignInAppleScreenState extends State<SignInAppleScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                 AuthAppBar(
-                  title: SIGN_UP_WITH_APPLE,
+                  title: RESET_PASSWORD_SCREEN_TITLE,
                   backButton: () => Navigator.of(context).pop(),
                 ),
-                Image.asset(
-                  "assets/Group_247.png",
-                  height: 250,
-                ),
+                Image.asset("assets/1.png"),
                 Text(
-                  SIGN_UP_WITH_APPLE_TITLE,
+                  RESET_PASSWORD_EMAIL_SENT,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Color(0xFF32325D),
@@ -44,7 +35,7 @@ class SignInAppleScreenState extends State<SignInAppleScreen> {
                   padding:
                       const EdgeInsets.only(top: 16.0, left: 52.0, right: 54.0),
                   child: Text(
-                    SIGN_UP_WITH_APPLE_TEXT,
+                    RESET_PASSWORD_TEXT,
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Color(0xFF32325D), fontSize: 14.0),
                   ),
@@ -53,8 +44,8 @@ class SignInAppleScreenState extends State<SignInAppleScreen> {
                   padding:
                       const EdgeInsets.only(top: 40.0, left: 24.0, right: 24.0),
                   child: AuthButton(
-                      text: SIGN_UP_WITH_APPLE_BUTTON_TEXT,
-                      color: 0xFF333333,
+                      text: RESET_PASSWORD_EMAIL_BUTTON_TEXT,
+                      color: 0xFF5A7BEF,
                       textColor: 0xFFFFFFFF,
                       onPressed: () => {}),
                 ),
