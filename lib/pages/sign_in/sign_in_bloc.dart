@@ -1,7 +1,7 @@
 import 'package:addictive_learning/common/BaseBloc.dart';
 import 'package:addictive_learning/common/EN_en.dart';
 import 'package:addictive_learning/common/utils.dart';
-import 'file:///C:/Users/Tesseract/Desktop/flutter_ws/flutter_app/lib/common/Validators.dart';
+import 'package:addictive_learning/common/Validators.dart';
 import 'package:addictive_learning/repository/UserRepository.dart';
 import 'package:rxdart/rxdart.dart';
 
